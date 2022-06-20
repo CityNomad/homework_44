@@ -36,7 +36,3 @@ class Check:
         else:
             response_line = f'You have {bulls} bulls and {cows} cows'
             return response_line
-
-    def counter(self):
-        step += 1
-        return step
