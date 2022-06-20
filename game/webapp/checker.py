@@ -34,8 +34,6 @@ class Check:
             response_line = "You win"
             return response_line
         else:
-            print(bulls)
-            print(cows)
             response_line = f'You have {bulls} bulls and {cows} cows'
             return response_line
 
