@@ -23,12 +23,7 @@ def form_view(request):
                 result = game.get_result()
                 context["result"] = result
                 context['entered_nums'] = context_line
-                
                 print(context)
                 return render(request, "form.html", context)
 
-
-
-def history_view(request):
-    pass
 

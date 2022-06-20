@@ -40,4 +40,5 @@ class Check:
             return response_line
 
     def counter(self):
-        return step += 1
+        step += 1
+        return step
