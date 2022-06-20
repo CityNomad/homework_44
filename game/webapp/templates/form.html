@@ -12,6 +12,20 @@
         <input type="submit" value="Send"/>
     </form>
 
-    <p>{{ response }}</p>
+    <p>{{ response_line }}</p>
+    {% while True %}
+            {% for i in nums %}
+               {% for j in secret_nums %}
+                    {% if i == j and nums.index(i) == secret_nums.index(j) %}
+                        {{ bulls }} += 1
+                        {% if bulls == 4 %}
+                            <p>'Congratulations, you won!'</p>
+                        {% endif %}
+                    {% elif i == j and nums.index(i) != secret_nums.index(j) %}
+                        {{ cows }} += 1
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            <p>'You have got {{bulls}} bulls and {{cows}} cows.'</p>
 </body>
 </html>
