@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+</head>
+<body>
+    {% for j in results %}
+        <h2>Step: {{ forloop.counter }}</h2>
+        <p style="font-size: 16px;">{{ j }}</p>
+    {% endfor %}
+
+</body>
+</html>

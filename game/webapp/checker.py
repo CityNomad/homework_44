@@ -31,8 +31,8 @@ class Check:
             elif self.numbers[i] in self.secret_nums:
                 cows += 1
         if bulls == 4:
-            response_line = "You win"
+            response_line = "You win."
             return response_line
         else:
-            response_line = f'You have {bulls} bulls and {cows} cows'
+            response_line = f'You have {bulls} bulls and {cows} cows.'
             return response_line

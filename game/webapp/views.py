@@ -4,6 +4,9 @@ from webapp.checker import Check
 
 # Create your views here.
 
+
+res_list = []
+
 def form_view(request):
     context = {
     }
@@ -23,6 +26,14 @@ def form_view(request):
                 result = game.get_result()
                 context["result"] = result
                 context['entered_nums'] = context_line
+                response_line = f'You have entered: {context_line}.'
+                result_line = " ".join([result, response_line])
+                res_list.append(result_line)
                 return render(request, "form.html", context)
 
+def history_view(request):
 
+    context = {"results": res_list,}
+
+    if request.method == "GET":
+        return render(request, "history.html", context)
